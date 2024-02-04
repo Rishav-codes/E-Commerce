@@ -33,9 +33,10 @@ class OrderController extends Controller
     }
     
     public function myOrder(){
-        $data['order'] =  Order::where([["status",true],["user_id",Auth::id()]])->first();
-        return view('home.myOrder',$data);
+        $data['orders'] =  Order::where([["status",true],["user_id",Auth::id()]])->get();
+        return view('home.myOrder', $data);
     }
+    
   
     public function addToCart(Request $request, $id)
     {
