@@ -49,10 +49,17 @@
                     @endforeach
                 </div>
             @else
-                <div class="col-7">
-                    {{-- No orders message or other content --}}
-                    <p>No orders found.</p>
+            <div class="row">
+                <div class="col-4 mx-auto mt-5">
+                    <div class="card border-0">
+                        <div class="card-body ">
+                            <h1 class="display-4 text-secondary fw-bold ">Cart is empty</h1>
+                            <a href="{{ route('home.home') }}" class="btn btn-dark mt-4 w-100">Shop now</a>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </div>
             @endif
 
         </div>
